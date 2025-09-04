@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Krashan Kumar Deewach — Ground Staff | Portfolio</title>
+  <meta name="description" content="Premium portfolio — Krashan Kumar Deewach. Ground staff, passenger handling, Amadeus/Galileo, First Aid certified." />
+  <style>
+    :root{
+      --bg:#071029; --card:rgba(255,255,255,0.06); --glass:rgba(255,255,255,0.06);
+      --accent:#0ea5e9; --accent-2:#38bdf8; --muted:#9aa8bd; --radius:16px; --glass-border:rgba(255,255,255,0.08);
+      --shadow: 0 10px 30px rgba(2,6,23,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;background:linear-gradient(180deg,#042033 0%,#071029 100%);color:#e6f0fb;-webkit-font-smoothing:antialiased}
+
+    /* NAV */
+    .nav{position:sticky;top:12px;z-index:40;display:flex;justify-content:space-between;align-items:center;width:min(1100px,94vw);margin:0 auto;padding:10px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .brand .logo{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:inline-grid;place-items:center;font-size:20px}
+    .nav-links{display:flex;gap:14px}
+    .nav-links a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+    .nav-links a:hover{color:white;background:rgba(255,255,255,0.03)}
+
+    /* HERO */
+    .hero{width:min(1100px,94vw);margin:28px auto 18px;display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:center}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;gap:18px;padding-bottom:0}}
+
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));border-radius:18px;padding:28px;border:1px solid var(--glass-border);box-shadow:var(--shadow)}
+    .role{display:inline-flex;gap:10px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--accent);font-weight:600}
+    h1{font-size:clamp(26px,4.6vw,40px);margin:14px 0 8px}
+    p.lead{color:var(--muted);margin:0 0 18px;max-width:66ch}
+
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:12px;font-weight:700;cursor:pointer;border:1px solid rgba(255,255,255,0.06)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#042033}
+    .btn.ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+
+    /* PROFILE */
+    .profile-card{display:flex;flex-direction:column;align-items:center;gap:12px;padding:18px;border-radius:18px;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+    .avatar{width:160px;height:160px;border-radius:20px;overflow:hidden;border:4px solid rgba(255,255,255,0.06);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-size:20px;font-weight:800}
+    .sub{color:var(--muted);font-weight:600}
+
+    /* SECTIONS */
+    main{width:min(1100px,94vw);margin:18px auto 80px;display:grid;gap:18px}
+    .grid-3{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media(max-width:900px){.grid-3{grid-template-columns:1fr}}
+    .glass{background:var(--glass);border-radius:14px;padding:18px;border:1px solid var(--glass-border);backdrop-filter:blur(6px)}
+    .section-title{font-size:18px;color:#dff2ff;margin-bottom:8px}
+
+    .skills{display:flex;flex-direction:column;gap:12px}
+    .skill{display:flex;flex-direction:column;gap:6px}
+    .skill-row{display:flex;justify-content:space-between;font-weight:700}
+    .bar{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.cards{grid-template-columns:1fr}}
+
+    .edu-item{display:flex;flex-direction:column;gap:6px}
+
+    /* CONTACT */
+    .contacts{display:flex;gap:12px;flex-wrap:wrap}
+    .contact-chip{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+
+    footer{width:min(1100px,94vw);margin:20px auto 60px;color:var(--muted);text-align:center}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    a.action{color:inherit}
+
+    /* smooth scroll behavior */
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+  <div style="height:12px"></div>
+  <header class="nav" role="banner">
+    <div class="brand"><div class="logo">✈️</div><div>Krashan Kumar</div></div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#cert">Certs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <div class="role">✈︎ Ground Staff • Passenger Handling</div>
+      <h1>Krashan Kumar Deewach</h1>
+      <div class="muted">Delivering safe, timely and service‑focused passenger experiences. Trained in First Aid and experienced with reservation systems (Amadeus/Galileo).</div>
+
+      <div style="height:14px"></div>
+      <div class="cta">
+        <a class="btn primary" href="mailto:krashandeewach7@gmail.com">Email krashandeewach7@gmail.com</a>
+        <a class="btn ghost" href="tel:+919461946165">Call +91 94619 46165</a>
+        <a class="btn ghost" href="#contact">View Contact</a>
+      </div>
+
+      <div style="height:18px"></div>
+      <div class="cards">
+        <div class="glass">
+          <div class="section-title">Objective</div>
+          <div class="muted">To secure a position as Ground Staff at a reputed airport where I can ensure smooth passenger experience, operational efficiency, and uphold safety and service standards.</div>
+        </div>
+        <div class="glass">
+          <div class="section-title">Languages</div>
+          <div class="muted">Hindi — Native<br/>English — Proficient</div>
+        </div>
+        <div class="glass">
+          <div class="section-title">Training</div>
+          <div class="muted">First Aid — India Red Cross Society (Issued: 24 Feb 2024)</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="profile-card">
+      <div class="avatar">
+        <img src="/mnt/data/WhatsApp Image 2025-09-04 at 23.34.55_ae670d00.jpg" alt="Krashan Kumar Deewach — Profile photo"/>
+      </div>
+      <div class="name">Krashan Kumar Deewach</div>
+      <div class="sub">Ground Staff • Passenger Handling • Amadeus / Galileo</div>
+      <div style="height:8px"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn ghost" href="mailto:krashandeewach7@gmail.com">Email</a>
+        <a class="btn ghost" href="tel:+919461946165">Call</a>
+      </div>
+    </aside>
+  </section>
+
+  <main>
+    <section id="skills" class="glass">
+      <div class="section-title">Skills & Strengths</div>
+      <div class="skills">
+        <div class="skill">
+          <div class="skill-row"><span>Passenger Handling</span><span>95%</span></div>
+          <div class="bar" aria-hidden><i style="width:95%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-row"><span>Reservation Systems (Amadeus / Galileo)</span><span>80%</span></div>
+          <div class="bar" aria-hidden><i style="width:80%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-row"><span>First Aid & Safety</span><span>85%</span></div>
+          <div class="bar" aria-hidden><i style="width:85%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-row"><span>Multitasking & Calm under pressure</span><span>92%</span></div>
+          <div class="bar" aria-hidden><i style="width:92%"></i></div>
+      </div>
+    </section>
+
+    <section id="education" class="glass">
+      <div class="section-title">Education</div>
+      <div class="edu-item">
+        <strong>Senior Secondary (Science) — 2019</strong>
+        <div class="muted">Disha Public School, Neem Ka Thana, Sikar — 60%</div>
+      </div>
+      <div style="height:12px"></div>
+      <div class="edu-item">
+        <strong>Secondary (10th) — 2017</strong>
+        <div class="muted">Vidya Bharati Senior Secondary School, Neem Ka Thana, Sikar — 60%</div>
+      </div>
+    </section>
+
+    <section id="cert" class="glass">
+      <div class="section-title">Certifications</div>
+      <div class="muted">First Aid — India Red Cross Society<br/>Issued by Chairman, Minister of Health & Family Welfare, Government of India • 24 Feb 2024</div>
+    </section>
+
+    <section id="contact" class="glass">
+      <div class="section-title">Contact</div>
+      <div class="contacts">
+        <a class="contact-chip" href="mailto:krashandeewach7@gmail.com"><strong>📧</strong><span>krashandeewach7@gmail.com</span></a>
+        <a class="contact-chip" href="tel:+919461946165"><strong>📞</strong><span>+91 94619 46165</span></a>
+        <div class="contact-chip"><strong>📍</strong><span>Village Heeranagar, Tehsil Neem Ka Thana, District Sikar, Rajasthan – 332713</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Krashan Kumar Deewach — Built with care.</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
